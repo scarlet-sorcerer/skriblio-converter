@@ -153,7 +153,9 @@ def curses_run(stdscr) -> None:
     with open(OUTPUT_FILENAME, 'w') as f:
         f.write(final_product)
 
-    stdscr.addstr(f'Selected categories: {selected_categories}\n')
+    stdscr.addstr('Selected categories:\n')
+    for category in selected_categories:
+        stdscr.addstr(f' * {category}\n')
     stdscr.addstr('Press any key to exit...')
     stdscr.getch()
 
