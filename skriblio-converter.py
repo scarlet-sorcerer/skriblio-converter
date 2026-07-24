@@ -95,7 +95,6 @@ def curses_run(stdscr) -> None:
 
     stdscr.clear()
 
-
     try:
         raw_data = parse_file(INPUT_FILENAME)
     except FileNotFoundError:
@@ -153,7 +152,9 @@ def curses_run(stdscr) -> None:
     with open(OUTPUT_FILENAME, 'w') as f:
         f.write(final_product)
 
-    stdscr.addstr(f'Selected categories: {selected_categories}\n')
+    stdscr.addstr('Selected categories:\n')
+    for category in selected_categories:
+        stdscr.addstr(f' * {category}\n')
     stdscr.addstr('Press any key to exit...')
     stdscr.getch()
 
@@ -168,7 +169,4 @@ def run():
 
 
 if __name__ == '__main__':
-    #all_categories = 'ALL'
-    #endwalker = ['Asphodelos', 'Abyssos', 'Anabaseios']
-    #synthesize_final_product('test.txt', endwalker)
     run()
