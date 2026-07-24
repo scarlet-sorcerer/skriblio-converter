@@ -118,7 +118,7 @@ def curses_run(stdscr) -> None:
                 attr = attributes['highlighted']
             else:
                 attr = attributes['normal']
-            stdscr.addstr(f'[{"✓" if category_states[i] == 1 else "x"}] ')
+            stdscr.addstr(f'[{"✓" if category_states[i] == 1 else "×"}] ')
             stdscr.addstr(categories[i] + '\n', attr)
         
         stdscr.addstr('Press y to finalize your selection, a to enable all, or q to quit')
