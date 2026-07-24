@@ -223,4 +223,5 @@ __marimo__/
 *.py~
 *.swp
 *.swo
+*.*~
 output.txt
