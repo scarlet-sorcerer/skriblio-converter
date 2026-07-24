@@ -95,7 +95,6 @@ def curses_run(stdscr) -> None:
 
     stdscr.clear()
 
-
     try:
         raw_data = parse_file(INPUT_FILENAME)
     except FileNotFoundError:
@@ -170,7 +169,4 @@ def run():
 
 
 if __name__ == '__main__':
-    #all_categories = 'ALL'
-    #endwalker = ['Asphodelos', 'Abyssos', 'Anabaseios']
-    #synthesize_final_product('test.txt', endwalker)
     run()
