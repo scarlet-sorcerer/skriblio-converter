@@ -1,5 +1,5 @@
 # skriblio-converter
-Small script to convert categorized lists to comma separated lists for use at skribl.io
+Small script to convert categorized lists to comma separated lists for use at skribbl.io
 
 Accepts input as a .txt file in the working directory matching the name `castbars.txt`. <br>
 Will detect categories from lines beginning with `--` <br>
